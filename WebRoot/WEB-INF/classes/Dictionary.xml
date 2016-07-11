@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 这是数据字典 -->
+<dictionary>
+	<group key="gender" value="性别">
+		<item key="gender_male" value="男"></item>
+		<item key="gender_female" value="女"></item>
+	</group>
+	
+	<group key="isDuty" value="是否在职">
+		<item key="isDuty_on" value="在职"></item>
+		<item key="isDuty_off" value="离职"></item>
+	</group>
+	
+	<group key="units" value="所属单位">
+		<item key="untis_beijing1" value="北京1"></item>
+		<item key="untis_shanghai1" value="上海1"></item>
+		<item key="untis_guangzhou" value="广州1"></item>
+		<item key="untis_shenzhen1" value="深圳1"></item>
+		<item key="untis_xiamen1" value="厦门1"></item>
+	</group>
+	
+	<group key="applyStatus" value="审核状态">
+		<item key="applyStatus_ing" value="审核中"></item>
+		<item key="applyStatus_notPass" value="未通过"></item>
+		<item key="applyStatus_pass" value="通过"></item>
+	</group>
+</dictionary>

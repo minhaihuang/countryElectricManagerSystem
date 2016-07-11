@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.elec.domain.ElecRole" table="elecRole">
+		<id name="roleId" >
+			<generator class="uuid"></generator>
+		</id>	
+			
+		<property name="rolename" column="rolename"></property>
+		
+			<!-- 多对多关联关系,只配置了一端 -->
+		<set name="functions" table="elecRoleFunction" lazy="false">
+			<key column="roleId"></key>
+			<many-to-many class="com.hhm.elec.domain.ElecFunction" column="functionId"></many-to-many>
+		</set>
+
+		
+	</class>
+</hibernate-mapping>

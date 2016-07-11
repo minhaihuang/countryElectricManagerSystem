@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="system" namespace="/system" extends="new-struts-default">
+		<!-- 注意，此处的class名称一定要与beans.xml中配置该Action的bean标签的id属性值相同 -->
+		<action name="elecMatterAction_*" class="elecMatterAction" method="{1}">
+			<result name="matterHome" type="dispatcher">
+				/WEB-INF/jsp/system/matterHome.jsp
+			</result>
+			
+			<result name="addElecMatter" type="redirectAction">
+				system/elecMatterAction_matterHome.action
+			</result>
+		</action>
+		
+		
+		
+		
+		<action name="elecUserAction_*" class="elecUserAction" method="{1}">
+			<result name="userHome" type="dispatcher">
+				/WEB-INF/jsp/system/userHome.jsp
+			</result>
+			
+			<result name="userAdd" type="dispatcher">
+				/WEB-INF/jsp/system/userAdd.jsp
+			</result>
+			
+			<result name="delete" type="redirectAction">
+				system/elecUserAction_userHome.action
+			</result>
+			
+			<result name="userEdit" type="dispatcher">
+				/WEB-INF/jsp/system/userEdit.jsp
+			</result>
+			
+			<result name="update" type="redirectAction">
+				system/elecUserAction_userHome.action
+			</result>
+			
+			<result name="loginSuccess" type="dispatcher">
+				/WEB-INF/jsp/menu/home.jsp
+			</result>
+			
+			<result name="loginError" type="dispatcher">
+				/WEB-INF/jsp/menu/index.jsp
+			</result>
+			
+			<result name="exportChart" type="dispatcher">
+				/WEB-INF/attach/chart/${#request.fileName}
+			</result>
+			
+		</action>
+		
+		<action name="elecAuthAction_*" class="elecAuthAction" method="{1}">
+			<result name="roleHome" type="dispatcher">
+				/WEB-INF/jsp/system/roleHome.jsp
+			</result>
+		</action>
+	</package>
+</struts>

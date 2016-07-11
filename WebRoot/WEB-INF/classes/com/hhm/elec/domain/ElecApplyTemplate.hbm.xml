@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.elec.domain.ElecApplyTemplate" table="ElecApplyTemplate">
+		<id name="templateId" >
+			<generator class="uuid"></generator>
+		</id>	
+		<property name="fileName" column="fileName"></property>
+		<property name="path" column="path"></property>
+		<property name="processDefinitionKey" column="processDefinitionKey"></property>
+	</class>
+</hibernate-mapping>

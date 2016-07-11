@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.elec.domain.ElecUser" table="ElecUser">
+		<id name="userId" >
+			<generator class="uuid"></generator>
+		</id>	
+			
+		<property name="account" column="account"></property>
+		<property name="password" column="password"></property>
+		<property name="username" column="username"></property>
+		<property name="gender" column="gender"></property>
+		<property name="birthday" column="birthday"></property>
+		<property name="address" column="address"></property>
+		<property name="homeTel" column="homeTel"></property>
+		<property name="phone" column="phone"></property>
+		<property name="email" column="email"></property>
+		<property name="isDuty" column="isDuty"></property>
+		<property name="units" column="units"></property>
+		<property name="onDutyDate" column="onDutyDate"></property>
+		<property name="offDutyDate" column="offDutyDate"></property>
+		<property name="comment" column="comment"></property>
+		<property name="createUser" column="createUser"></property>
+		<property name="lastUpdateUser" column="lastUpdateUser"></property>
+		<property name="lastUpdateDate" column="lastUpdateDate"></property>
+		<property name="isDelete" column="isDelete"></property>
+		<property name="createDate" column="createDate"></property>
+				
+		<!-- 多对多关联关系,只配置了一端 -->
+		<set name="roles" table="elecUserRole"  lazy="false">
+			<key column="userId"></key>
+			<many-to-many column="roleId" class="com.hhm.elec.domain.ElecRole"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

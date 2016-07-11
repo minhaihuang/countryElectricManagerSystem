@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="countryElectricManagerSystem"
+  id="myeclipse.1459304184530"
+  context-root="/countryElectricManagerSystem"
+  j2ee-spec="5.0"
+  archive="countryElectricManagerSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
